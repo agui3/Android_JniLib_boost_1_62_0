@@ -1,0 +1,2 @@
+1. 将user/user-config.jam拷贝到 tools\build\src 目录
+2. 执行build_android.bat脚本
