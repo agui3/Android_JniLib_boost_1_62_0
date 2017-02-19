@@ -104,7 +104,7 @@ androidPlatform = darwin-x86 ;
 }  
    
 modules.poke : NO_BZIP2 : 1 ;  
-ANDROID_NDK = D:/agui/ndk/android-ndk-r9 ;  
+ANDROID_NDK = /root/agui/android/android-ndk-r10e ;  
 using gcc : android4.8 : $(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.8/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-g++ :  
 <archiver>$(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.8/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-ar  
 <ranlib>$(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.8/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-ranlib  
@@ -115,7 +115,7 @@ using gcc : android4.8 : $(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.8/pre
 <compileflags>-D__GLIBC__  
 <compileflags>-DBOOST_FILESYSTEM_VERSION=3  
 <compileflags>-lstdc++  
-<compileflags>-lgnustl_shared  
+<compileflags>-lgnustl_shared
 <compileflags>-mthumb  
 <compileflags>-fno-strict-aliasing  
 <compileflags>-std=gnu++11  

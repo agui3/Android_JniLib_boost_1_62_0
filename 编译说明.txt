@@ -1,2 +1,16 @@
-1. 将user/user-config.jam拷贝到 tools\build\src 目录
-2. 执行build_android.bat脚本
+1. 执行bootstrap.sh, 生成b2 bjam
+
+2. windows跳过此步骤。
+将user/user-config.jam拷贝到 tools/build/src 目录
+cp user/user-config.jam tools/build/src/
+
+3. libs\context\src\unsupported.cpp
+注释代码：
+//#error "platform not supported"
+
+4. 执行命令
+android执行：
+./b2 --without-python --without-log toolset=gcc-android4.8 link=static runtime-link=shared threading=multi target-os=linux --stagedir=android
+
+windows执行：
+bjam.exe --toolset=msvc-8.0 --prefix=output/ --build-type=complete --without-python link=static runtime-link=shared threading=multi install
